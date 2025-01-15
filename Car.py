@@ -13,6 +13,10 @@ class Car:
         self.engine = engine
         self.navigationSystem = navigationSystem
         self.sensorSystem = sensorSystem
+        self.rpm = None
+        self.turbo = None
+        self.maf = None
+        self.throttlePosition = None
 
     def getFuelLevel(self) -> float:
         return self.fuelLevel
@@ -31,3 +35,12 @@ class Car:
 
     def setFuelLevel(self, fuelLevel: float) -> None:
         self.fuelLevel = fuelLevel
+
+    def set_obd_data(self, data: dict):
+        self.rpm = data.get("rpm")
+        self.turbo = data.get("turbo")
+        self.maf = data.get("maf")
+        self.oilTemp = data.get("oilTemp")
+        self.speed = data.get("speed")
+        self.fuel = data.get("fuel")
+        self.throttlePosition = data.get("throttlePosition")

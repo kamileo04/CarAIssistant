@@ -9,7 +9,7 @@ class NavigationSystem:
 
     def provideETA(self) -> int:
         # Tutaj logika do obliczania ETA
-        return 60  # Przyk³adowe ETA w minutach
+        return 60
 
     def setCurrentLocation(self, currentLocation: str) -> None:
         self.currentLocation = currentLocation
