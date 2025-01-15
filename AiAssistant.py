@@ -1,4 +1,4 @@
-from Car import Car
+ï»¿from Car import Car
 from Driver import Driver
 import google.generativeai as genai
 
@@ -12,13 +12,13 @@ class AiAssistant:
     def provideCarStatus(self, car: Car) -> str:
         status = (
             f"Obroty silnika: {car.rpm}\n"
-            f"Ciœnienie turbo: {car.turbo}\n"
-            f"Przep³yw powietrza: {car.maf}\n"
-            f"Prêdkoœæ pojazdu: {car.speed}\n"
+            f"CiÅ›nienie turbo: {car.turbo}\n"
+            f"PrzepÅ‚yw powietrza: {car.maf}\n"
+            f"PrÄ™dkoÅ›Ä‡ pojazdu: {car.speed}\n"
             f"Pozycja przepustnicy: {car.throttlePosition}\n"
-            f"Poziom na³adowania baterii: {car.getBatteryCharge()}\n"
-            f"Czy s¹ otwarte drzwi: {'Tak' if car.sensorSystem.checkDoorStatus() else 'Nie'}\n"
-            f"Cel podró¿y: {car.navigationSystem.destination}\n"
+            f"Poziom naÅ‚adowania baterii: {car.getBatteryCharge()}\n"
+            f"Czy sÄ… otwarte drzwi: {'Tak' if car.sensorSystem.checkDoorStatus() else 'Nie'}\n"
+            f"Cel podrÃ³Å¼y: {car.navigationSystem.destination}\n"
             f"Aktualna lokalizacja: {car.navigationSystem.currentLocation}\n"
             f"Szacowany czas dotarcia do celu: {car.navigationSystem.provideETA()} minut"
         )
